@@ -1,0 +1,7 @@
+{
+  "name": "Laporin Aja",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
