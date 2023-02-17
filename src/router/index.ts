@@ -1,17 +1,27 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import HomePage from '../views/HomePage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: { name: 'user.dashboard' }
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: HomePage
-  }
+    path: '/user',
+    component: () => import('../layout/userLayout.vue'),
+    children: [
+      {
+        path: 'dashboard',
+        name: 'user.dashboard',
+        component: () => import('../views/guest/berandaUser.vue')
+      },
+    ]
+  },
+  {
+    path: '/take-photo',
+    name: 'takePhoto',
+    component: () => import('../views/guest/plugins/useCameraAPI.vue')
+  },
 ]
 
 const router = createRouter({
