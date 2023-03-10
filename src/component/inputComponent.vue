@@ -3,7 +3,7 @@
         <label class="label">
             <span class="label-text">{{props.title}}</span>
         </label>
-        <input type="text" @input="$emit('update:modelValue', $event.target.value)" :placeholder="`Input ${props.title}`" class="input input-bordered w-full" />
+        <input :value="props.modelValue" :type="password?'password':'text'" @input="$emit('update:modelValue', $event.target.value)" :placeholder="`Input ${props.title}`" class="input input-bordered w-full" />
         <label class="label">
             <span class="label-text-alt text-error" v-if="props.error">{{props.error}}</span>
         </label>
@@ -15,6 +15,7 @@ const props = defineProps({
     title: String,
     modelValue: String,
     error: String,
+    password: Boolean,
 })
 </script>
 <style lang="">

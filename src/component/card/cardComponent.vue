@@ -5,7 +5,7 @@
             <video 
             :src="`${props.src}#t=0.1`" 
             class="object-cover h-28 w-32" 
-            v-else-if="props.src.split('.')[props.src.split('.').length-1] != 'mp4'"
+            v-else-if="props.src.split('.')[props.src.split('.').length-1] == 'mp4'"
             height="100%"
             width="100%" 
             muted

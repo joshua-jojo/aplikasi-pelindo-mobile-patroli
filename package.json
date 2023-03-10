@@ -21,6 +21,7 @@
     "@capacitor/filesystem": "^4.1.4",
     "@capacitor/haptics": "4.1.0",
     "@capacitor/keyboard": "4.1.1",
+    "@capacitor/preferences": "^4.0.2",
     "@capacitor/status-bar": "4.1.1",
     "@ionic-native/media-capture": "^5.36.0",
     "@ionic-native/video-capture-plus": "^5.36.0",
@@ -38,10 +39,12 @@
     "tailwindcss": "^3",
     "vue": "^3.2.21",
     "vue-axios": "^3.5.2",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@capacitor/cli": "^4.6.3",
+    "@fortawesome/fontawesome-free": "^6.3.0",
     "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",

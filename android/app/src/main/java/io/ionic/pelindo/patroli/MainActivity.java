@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package io.ionic.pelindo.patroli;
 
 import com.getcapacitor.BridgeActivity;
 

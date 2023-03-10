@@ -16,7 +16,7 @@
       <div class="py-2">
         <div class="form-control">
           <div class="input-group w-full">
-            <input type="text" placeholder="Search…" class="input input-bordered w-full" />
+            <input type="text" placeholder="Search…" v-model="form.cari" class="input input-bordered w-full" />
             <button class="btn btn-square btn-primary">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -39,8 +39,8 @@
             Pelindo Teluk Bayur Hotline
           </div>
           <!-- item post  -->
-          <Suspense>
-            <ambilPostingan></ambilPostingan>
+          <Suspense :key="form.cari">
+            <ambilPostingan :cari="form.cari"></ambilPostingan>
             <template #fallback>
                 <cardSkeleton></cardSkeleton>
             </template>
@@ -52,8 +52,13 @@
 </div>
 </template>
 <script lang="ts" setup>
-import ambilPostingan from './postingan/ambilPostingan.vue';
+import ambilPostingan from './postingan/ambilSemuaPostingan.vue';
 import carouselComponent from '../../component/carousel/carouselComponent.vue';
 import carouselSkeleton from '../../component/carousel/carouselSkeleton.vue';
 import cardSkeleton from '../../component/card/cardSkeleton.vue';
+import { reactive } from 'vue';
+
+const form = reactive({
+  cari : ''
+})
 </script>
